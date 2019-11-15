@@ -5,6 +5,6 @@ Steps to create terraform backend:
 2. terrafrom apply
 2. uncomment terraform backend configuration and update with the name you entered in variables file
 3. run terraform init 
-> Success
+<p> Success </p>
 
 
