@@ -18,11 +18,11 @@ variable "region" {
 variable "bucket_name" {
   description = "The name of the S3 bucket. Must be globally unique."
   type        = string
-  default     = "s3-terraform-backends-cg1"
+  default     = "your-s3-name"
 }
 
 variable "table_name" {
   description = "The name of the DynamoDB table. Must be unique in this AWS account."
   type        = string
-  default     = "dyanmo-terraform-backends-cg1"
+  default     = "your-DynamoDB-Name"
 }
