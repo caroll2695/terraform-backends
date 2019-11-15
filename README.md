@@ -1,5 +1,4 @@
 # terraform backends 
-Terraform Up and Running Backends Exercise 
 
 Steps to create terraform backend:
 1. Enter unique s3 bucket and DyanmoDb names in the variables file. 
