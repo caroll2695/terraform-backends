@@ -3,15 +3,11 @@ terraform {
 }
 
 provider "aws" {
-  access_key = var.access_key
-  secret_key = var.secret_key
-  region     = var.region
+  region = "us-east-2"
 
   # Allow any 2.x version of the AWS provider
-  version = "~> 2.7"
+  version = "~> 2.0"
 }
-
-
 
 resource "aws_s3_bucket" "terraform_state" {
 
@@ -47,19 +43,3 @@ resource "aws_dynamodb_table" "terraform_locks" {
     type = "S"
   }
 }
-
-terraform {
-  backend "s3" {
-    # Replace this with your bucket name!
-    bucket         = "s3-terraform-backends-cg1"
-    key            = "global/s3/terraform.tfstate"
-    region         = "us-east-2"
-
-    # Replace this with your DynamoDB table name!
-    dynamodb_table = "dyanmo-terraform-backends-cg1"
-    encrypt        = true
-  }
-}
-
-
-
