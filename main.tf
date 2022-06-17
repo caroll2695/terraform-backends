@@ -1,17 +1,17 @@
 terraform {
-  required_version = ">= 0.12, < 0.13"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+
+  }
+  required_version = ">= 1.2"
 }
 
 provider "aws" {
-  access_key = var.access_key
-  secret_key = var.secret_key
-  region     = var.region
-
-  # Allow any 2.x version of the AWS provider
-  version = "~> 2.7"
+  region = var.region
 }
-
-
 
 resource "aws_s3_bucket" "terraform_state" {
 
